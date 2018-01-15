@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica 15</title>
+</head>
+<body>
+<h1>Imagen intercambiables</h1>
+<picture>
+    <source srcset="monitor.svg" media="(min-width:1200px)">
+    <source srcset="portatil.svg" media="(min-width:800px)">
+    <img src="smartphone.svg" alt="Imagen">
+</picture>
+<br>
+<h1>Imagen en dos formatos</h1>
+<picture>
+    <source srcset="vietnam.webp" type="image/webp">
+    <img src="vietnam.jpg" width="500">
+</picture>
+<br>
+<h1>Ecuación</h1>
+<math style="display: block;"> <mtable columnalign="right center left">
+    <mtr> <mtd> <msup> <mrow> <mo> ( </mo> <mi> a </mi> <mo> + </mo> <mi> b </mi> <mo> )
+    </mo> </mrow> <mn> 2 </mn> </msup> </mtd> <mtd> <mo> = </mo> </mtd> <mtd> <msup><mi> c </mi><mn>2</mn></msup> <mo> + </mo>
+        <mn> 4 </mn> <mo> ⋅ </mo> <mo>(</mo> <mfrac> <mn> 1 </mn> <mn> 2 </mn> </mfrac> <mi> a </mi><mi> b </mi> <mo>)</mo>
+    </mtd> </mtr> <mtr> <mtd> <msup><mi> a </mi><mn>2</mn></msup> <mo> + </mo> <mn> 2 </mn><mi> a </mi><mi> b </mi> <mo> + </mo>
+    <msup><mi> b </mi><mn>2</mn></msup> </mtd> <mtd> <mo> = </mo> </mtd> <mtd> <msup><mi> c </mi><mn>2</mn></msup> <mo> + </mo> <mn> 2
+</mn><mi> a </mi><mi> b</mi></mtd></mtr><mtr><mtd></mtd></mtr><mtr><mtd><msup><mi>a </mi><mn>2</mn></msup> <mo> + </mo> <msup><mi> b
+</mi><mn>2</mn></msup> </mtd> <mtd> <mo> = </mo> </mtd> <mtd> <msup><mi> c </mi><mn>2</mn></msup> </mtd> </mtr> </mtable> </math>
+<br>
+<h1>Canvas</h1>
+<canvas id="canvas" width="300" height="300">
+<script type="text/javascript">
+    var sun = new Image();
+    var moon = new Image();
+    var earth = new Image();
+    function init() {
+        sun.src = 'https://mdn.mozillademos.org/files/1456/Canvas_sun.png';
+        moon.src = 'https://mdn.mozillademos.org/files/1443/Canvas_moon.png';
+        earth.src = 'https://mdn.mozillademos.org/files/1429/Canvas_earth.png';
+        window.requestAnimationFrame(draw);
+    }
+
+    function draw() {
+        var ctx = document.getElementById('canvas').getContext('2d');
+
+        ctx.globalCompositeOperation = 'destination-over';
+        ctx.clearRect(0, 0, 300, 300); // clear canvas
+
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.4)';
+        ctx.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+        ctx.save();
+        ctx.translate(150, 150);
+
+        // Earth
+        var time = new Date();
+        ctx.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+        ctx.translate(105, 0);
+        ctx.fillRect(0, -12, 50, 24); // Shadow
+        ctx.drawImage(earth, -12, -12);
+
+        // Moon
+        ctx.save();
+        ctx.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+        ctx.translate(0, 28.5);
+        ctx.drawImage(moon, -3.5, -3.5);
+        ctx.restore();
+
+        ctx.restore();
+
+        ctx.beginPath();
+        ctx.arc(150, 150, 105, 0, Math.PI * 2, false); // Earth orbit
+        ctx.stroke();
+
+        ctx.drawImage(sun, 0, 0, 300, 300);
+
+        window.requestAnimationFrame(draw);
+    }
+
+    init();
+     </script>
+</canvas>
+<br>
+<h1>Vídeo en varios formatos con subtítulos</h1>
+<video controls poster="poster.jpg" width="500">
+    <source src="saas.webm" type="video/webm">
+    <source src="saas.mp4" type="video/mp4">
+    <track src="saas-es.vtt" kind="subtitles" srclang="es" label="Español">
+    <track src="saas-en.vtt" kind="subtitles" srclang="en" label="Ingles">
+</video>
+<br>
+<h1>Audio(suena automáticamente en segundo plano)</h1>
+<audio controls autoplay>
+    <source src="cancion.mp2" type="audio/mpeg">
+    <source src="cancion.aiff" type="audio/aiff">
+    <audio src="cancion.mp3"></audio>
+</audio>
+</body>
+</html>
+<br>
+<h1>Créditos</h1>
+<p>Iconos fabricados por <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+<p>Foto de <a href="https://unsplash.com/photos/9xp0AWvlGC4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Zeyn Afuang</a> enb <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></p>
+<p>Animación copiada de la página de ayuda sobre la etiqueta canvas <a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations"> Fundación Mozilla</a></p>
+<p>Vídeo sobre SaaS perteneciente al curso <em>Engineering Software as a Service</em> de la <strong>Universidad de Berkley</strong></p>
+<p>Canción <em>The Lonely Doll</em> de <strong>Case McCombs</strong></p>
