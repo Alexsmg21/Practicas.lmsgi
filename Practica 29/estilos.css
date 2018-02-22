@@ -1,0 +1,36 @@
+h1{
+    background-color: #34495e;
+    color: white;
+}
+
+
+table h1{
+    background-color: #f1c40f;
+    color: #34495e;
+}
+th[rowspan]{
+    background-color: #34495e;
+    color: white;
+}
+a{
+    color: #1abc9c;
+}
+th a{
+    color: #f1c40f;
+}
+h2+p{
+    background-color: #f1c40f;
+    margin-left: 20px;
+}
+tr:last-child{
+    background-color: #34495e;
+    color: white;
+}
+tr:nth-child(even){
+    background-color: #bdc3c7;
+    color: #34495e;
+}
+p{
+    margin-left: 20px;
+    color: #34495e;
+}
