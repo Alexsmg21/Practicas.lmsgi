@@ -1,0 +1,119 @@
+
+@import url(https://fonts.googleapis.com/css?family=Anton);
+@import url(https://fonts.googleapis.com/css?family=Cantarell:400,700);
+body{
+    margin: 0;
+    background-image:url("img/parquet.jpg");
+    margin:40px;
+}
+#header{
+    width:100%;
+    border-collapse:collapse;
+    background-image: linear-gradient(to right,#042b47,#660c26);
+}
+
+h1{
+    text-align: center;
+    font-family: Anton,sans-serif;
+    font-size:250px;
+    color:white;
+    margin:0;
+    background-image:linear-gradient(90deg, #042b47 0%,#660c26 100%);
+}
+
+
+h2{
+    font-size:100px;
+    margin:0;
+    font-family: Anton, sans-serif;
+}
+
+h3{
+    color:white;
+    font-family: Cantarell,sans-serif;
+    font-weight: 700;
+    text-align: center;
+    margin:0;
+}
+
+p{
+    font-family: Cantarell,sans-serif;
+    font-weight: 400;
+}
+
+
+#west{
+    background-image: url("img/curry.png");
+    background-repeat:no-repeat;
+    background-color:#e8a2b6;
+    background-size: contain;
+}
+
+#east{
+    background-image: url("img/lebron.png");
+    background-position: right;
+    background-repeat:no-repeat;
+    background-color:#b0d8f5;
+    background-size: contain;
+    margin-top: -20px;
+}
+
+#west h2{
+    color:#042b47;
+    text-align: right;
+    margin-right:20px;
+}
+
+#west h3, #west ol{
+    margin-left:50%;
+    margin-right:20px;
+}
+
+#west h3 {
+    background-color: #042b47;
+}
+
+#east h2{
+    text-align: left;
+    color:#660c26;
+    margin-left:20px;
+}
+
+#east h3, #east ol{
+    margin-right:50%;
+    margin-left:20px;
+}
+
+#east h3 {
+    background-color: #660c26;
+
+
+}
+
+ol{
+    text-align: center;
+    background-color: rgba(100%,100%,100%,0.5);
+    margin-top: 0;
+
+
+
+}
+li:nth-of-type(1){
+    font-weight: bold;
+}
+
+
+
+li{
+    border-bottom: solid white 1px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+strong{
+    border-style: dotted;
+    color: #2c6624;
+}
+li:nth-of-type(3){
+    padding-bottom: 30px;
+    border-bottom: solid white 1px;
+}
