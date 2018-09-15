@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+div{
+    position: fixed;
+    width: 25%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#aretha{
+    background-image: url("../img/aretha.jpg");
+}
+
+
+#dionne{
+    left: 25%;
+    background-image: url("../img/dionne.jpg");
+
+}
+#diana{
+    left: 50%;
+    background-image: url("../img/diana.jpg");
+
+
+}
+#etta{
+    left: 75%;
+    background-image: url("../img/etta.jpg");
+
+}
+#fondo1{
+    background-color: rgba(255,0,255,0.30);
+    z-index: 100;
+    left:0;
+}
+#fondo2{
+    background-color: rgba(0,0,255,0.30);
+    z-index: 100;
+    left: 25%;
+}
+#fondo3{
+    background-color: rgba(255,0,153,0.30);
+    z-index: 100;
+    left: 50%;
+
+}#fondo4{
+     background-color: rgba(0,153,255,0.30);
+     z-index: 100;
+     left: 75%;
+ }
