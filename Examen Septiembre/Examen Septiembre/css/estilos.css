@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lobster');
 body{
     font-family: 'Lobster', cursive;
+    overflow-y: hidden;
 
 }
 section{
@@ -74,9 +75,32 @@ aside{
      font-size: 150px;
      position: fixed;
      z-index: 200;
-     margin-left: 20%;
-     margin-right: 20%;
+     text-align: center;
      top: -18%;
+     width: 100%;
 
  }
+ div:hover{;
+     height: 130%;
+     transition: 2s;
 
+ }
+ a{
+    margin-bottom: 50px;
+    margin-left: 135px;
+    bottom: 0;
+    position: fixed;
+    color:black;
+    z-index: 900;
+    text-decoration: none;
+    font-size: 1em;
+
+}
+ a:hover{
+     font-size: 50px;
+     font-weight: 900;
+     transition: 5s;
+     -webkit-transform: rotate(-360deg);
+
+
+ }
